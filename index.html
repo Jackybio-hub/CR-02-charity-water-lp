@@ -1,47 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charity: water — Change the World, One Well at a Time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="#" class="logo">
+        <img src="img/cw_logo.png" alt="charity: water logo" style="height: 24px;">
+        <span class="logo-text">charity: water</span>
+      </a>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+      <nav class="main-nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#story" class="nav-link">About Us</a>
+        <a href="#impact" class="nav-link">Impact</a>
+        <a href="#donate" class="nav-link">Donate</a>
+      </nav>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+      <a href="#donate" class="btn btn-outline">Join the Movement</a>
+    </div>
+    <div class="header-rule"></div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+  <div class="hero-copy">
+    <h1>Change the World,<br>One Well at a Time.</h1>
+    <p class="hero-sub">Join a global community turning donations into clean water for generations to come.</p>
+    <a href="#donate" class="btn btn-solid">
+      <span class="btn-dot"></span> Join the Movement
+    </a>
+  </div>
+
+  <div class="hero-media">
+    <img src="img/7255_Ethiopia_2019_CG-02.jpg" alt="A girl carrying her younger sibling while filling a water container at a well" class="hero-photo">
+  </div>
+</section>
+
+  <!-- ============ STORY / ABOUT ============ -->
+  <section class="story" id="story">
+    <div class="story-inner">
+      <div class="story-media">
+       <img src="img/4548_Ethiopia_2019_CG-01.jpg" alt="A hand filling a glass with clean water from a well tap" class="story-photo">
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">Why it matters</p>
+        <h2>771 million people live without clean water.</h2>
+        <p>That's nearly 1 in 10 people on the planet. Every day, women and children walk an average of 3.7 miles to collect water that often isn't even safe to drink — time that could be spent in school, at work, or simply being kids.</p>
+        <p>charity: water brings clean, safe drinking water to people in developing countries, funding sustainable projects that communities can rely on for decades. When a well is built, everything changes: health improves, girls stay in school, and families build a future.</p>
+        <a href="#impact" class="text-link">See our impact ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT STATS ============ -->
+  <section class="impact" id="impact">
+    <p class="eyebrow center">The impact so far</p>
+    <h2 class="center">Every dollar becomes a drop that counts.</h2>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <p class="stat-number">17,000+</p>
+        <p class="stat-label">Water projects funded worldwide</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-number">17M+</p>
+        <p class="stat-label">People given access to clean water</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-number">100%</p>
+        <p class="stat-label">Of public donations fund water projects directly</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-number">29</p>
+        <p class="stat-label">Countries reached across the globe</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DONATE CTA ============ -->
+  <section class="donate" id="donate">
+    <h2>Ready to change a life?</h2>
+    <p>$30 gives one person clean water for life. Your gift funds real wells, in real communities, forever.</p>
+    <a href="#" class="btn btn-solid large">
+      <span class="btn-dot"></span> Join the Movement
+    </a>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">💧</span>
+        <span class="logo-text">charity: water</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">Home</a>
+        <a href="#story">About Us</a>
+        <a href="#impact">Impact</a>
+        <a href="#donate">Donate</a>
+      </nav>
+      <p class="footer-note">Made with care for a world where everyone has clean water.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

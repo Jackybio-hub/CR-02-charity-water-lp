@@ -1,198 +1,461 @@
-/* charity: water Brand Colors & Fonts
+/* =========================================
+   charity: water — Landing Page Styles
+   Palette pulled from the Canva mockup:
+   cream bg, navy text, terracotta accent
+   ========================================= */
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+:root {
+  --cream: #FBF1DC;
+  --cream-soft: #FDF8ED;
+  --navy: #1C3A63;
+  --navy-soft: #385478;
+  --terracotta: #C16A4C;
+  --terracotta-dark: #A85539;
+  --white: #FFFFFF;
+  --text-body: #3B4657;
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+  --font-display: 'Lora', serif;
+  --font-body: 'Poppins', sans-serif;
 
-Fonts:
-- Proxima Nova
-- Avenir
+  --max-width: 1280px;
+}
 
-*/
+* { box-sizing: border-box; }
 
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
+html {
+  scroll-behavior: smooth;
+}
 
-/* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  color: #222;
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--cream);
+  overflow-x: hidden;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+h1, h2 {
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
-}
-
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
-}
-
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-}
-
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
-}
-
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
-}
-
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
+a {
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
+  color: inherit;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Add some spacing between sections */
-section {
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  border: 1.5px solid var(--terracotta);
+  color: var(--terracotta);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+.btn-solid {
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+.btn-solid:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(193, 106, 76, 0.35);
+}
+
+.btn-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  display: inline-block;
+}
+
+.btn.large {
+  padding: 18px 36px;
+  font-size: 1.05rem;
+}
+
+.text-link {
+  color: var(--terracotta);
+  font-weight: 700;
+  border-bottom: 2px solid var(--terracotta);
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.text-link:hover { opacity: 0.7; }
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  background: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  font-size: 1.1rem;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  color: var(--navy);
+}
+
+.main-nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--navy);
+  font-size: 0.98rem;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--terracotta);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.header-rule {
+  height: 3px;
+  background: var(--navy);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 48px 0;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--navy-soft);
+  max-width: 480px;
+  margin: 24px 0 40px;
+  line-height: 1.5;
+}
+
+.hero-media {
+  position: relative;
+}
+
+.hero-photo,
+.story-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.hero-photo {
+  border-radius: 16px 16px 0 0;
+  aspect-ratio: 4 / 5;
+}
+
+.story-photo {
+  aspect-ratio: 1 / 1;
+}
+
+/* ---------- Story / About ---------- */
+.story {
+  max-width: var(--max-width);
+  margin: 120px auto 0;
+  padding: 0 48px;
+}
+
+.story-inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  margin: 0 0 12px;
+}
+
+.eyebrow.center { text-align: center; }
+
+.story-copy h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   margin-bottom: 20px;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
+.story-copy p {
+  line-height: 1.7;
+  font-size: 1.02rem;
+  margin: 0 0 18px;
+}
 
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
+/* ---------- Impact stats ---------- */
+.impact {
+  max-width: var(--max-width);
+  margin: 130px auto 0;
+  padding: 0 48px;
+  text-align: center;
+}
+
+.impact h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(28, 58, 99, 0.12);
+}
+
+.stat-number {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--terracotta);
+  margin: 0 0 8px;
+}
+
+.stat-label {
+  font-size: 0.92rem;
+  color: var(--navy-soft);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ---------- Donate CTA ---------- */
+.donate {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--navy);
+  margin: 140px auto 0;
+  padding: 100px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate h2 {
+  color: var(--cream);
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.donate p {
+  color: #C9D5E5;
+  font-size: 1.1rem;
+  max-width: 520px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 56px 48px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-nav a {
+  font-size: 0.92rem;
+  color: var(--navy-soft);
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover { color: var(--terracotta); }
+
+.footer-note {
+  font-size: 0.85rem;
+  color: var(--navy-soft);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0.7;
+}
+
+@media (min-width: 640px) {
+  .footer-note { width: auto; text-align: right; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .nav-wrap {
+    flex-wrap: wrap;
+    padding: 20px 24px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+  }
+
   .hero {
-    padding: 32px 8px;
-    font-size: 1em;
+    grid-template-columns: 1fr;
+    padding: 48px 24px 0;
   }
 
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
+  .hero-media { order: -1; }
+
+  .story-inner {
+    grid-template-columns: 1fr;
   }
 
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
+  .story, .impact {
+    padding: 0 24px;
+    margin-top: 80px;
   }
 
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
+  .donate {
+    margin-top: 80px;
+    padding: 70px 24px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
     text-align: center;
   }
 
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
+  .footer-nav {
+    gap: 20px;
   }
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
+@media (max-width: 480px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
   }
 
-  .impact-image {
-    width: 300px;
+  .main-nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
